@@ -1,0 +1,1 @@
+//a[@class="red-btn J-getJumpUrl"]/@data-firstchapterjumpurl
