@@ -4,7 +4,7 @@ from tutorial.items import TutorialItem
 
 class QuoteSpider(scrapy.Spider):
     name = 'quote'
-    start_urls = ['https://book.qidian.com/info/1010736700']
+    start_urls = ['https://book.qidian.com/info/1010938502']
 
     def parse(self, response):
         item=TutorialItem()
@@ -42,7 +42,7 @@ class QuoteSpider(scrapy.Spider):
             item['flag']=2
 
             yield item
-            #yield scrapy.Request(url='https://'+nextChapterUrl[0],callback=self.parse_getChapterContent,errback=self.err_back)
+            yield scrapy.Request(url='https://'+nextChapterUrl[0],callback=self.parse_getChapterContent,errback=self.err_back)
 
     def err_back(self,response):
         with open('error.txt','a') as f:
