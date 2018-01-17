@@ -1,3 +1,4 @@
 tutorial/.idea/
 tutorial/tutorial/__pycache__/
 tutorial/tutorial/book/
+tutorial/tutorial/spiders/__pycache__/
