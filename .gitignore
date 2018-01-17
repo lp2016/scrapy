@@ -2,7 +2,7 @@ tutorial/.idea/
 tutorial/tutorial/__pycache__/
 tutorial/tutorial/book/
 test.py
-test.txt
+/test.txt
 test/
 test3/
 /test2/
