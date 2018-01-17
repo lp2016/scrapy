@@ -3,7 +3,7 @@ import scrapy
 from tutorial.items import TutorialItem
 
 class QuoteSpider(scrapy.Spider):
-    name = 'quote'
+    name = 'book'
     start_urls = ['https://book.qidian.com/info/1010938502']
 
     def parse(self, response):

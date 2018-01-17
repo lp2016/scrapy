@@ -14,12 +14,19 @@ BOT_NAME = 'tutorial'
 SPIDER_MODULES = ['tutorial.spiders']
 NEWSPIDER_MODULE = 'tutorial.spiders'
 
-
+#图片的存放路径
 IMAGES_STORE=r"C:\Users\LGH\Anaconda3\scrapy\tutorial\tutorial\book\\"
+
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 USER_AGENT = 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
-# Obey robots.txt rules
+
+#  Obey robots.txt rules
 ROBOTSTXT_OBEY = False
+
+#设置的话，日志将会在文件中显示，IDE的控制台不会在显示
+#LOG_FILE =  r'C:\Users\LGH\Anaconda3\scrapy\tutorial\tutorial\logs\logs.txt'
+#日志的等级，只显示级别高于INFO（包含INFO）的日志信息：WARNING、ERROR、CRITICAL
+LOG_LEVEL='INFO'
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -63,10 +70,11 @@ COOKIES_ENABLED = False
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-ITEM_PIPELINES = {
-    'tutorial.pipelines.TutorialPipeline': 300,
-    'tutorial.pipelines.ImgPipeline': 1,
-}
+# ITEM_PIPELINES = {
+#     'tutorial.pipelines.TutorialPipeline': 300,
+#     'tutorial.pipelines.ImgPipeline': 1,
+#     #'tutorial.pipelines.TestPipeline':1,
+# }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html

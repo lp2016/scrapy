@@ -20,7 +20,6 @@ class TutorialPipeline(object):
 
 
     def __init__(self):
-        print('pipleline init')
         self.f=open("book.json","w")
     def process_item(self, item, spider):
         if item['flag'] == 1:
@@ -33,6 +32,7 @@ class TutorialPipeline(object):
         else:
             ch={}
             ch["chapterName"]=item["chapterName"]
+            ch["chapterID"]=item["chapterID"]
             ch["chapterUpdateTime"]=item["chapterUpdateTime"]
             ch["chapterWordCount"]=item["chapterWordCount"]
             ch["chapterUrl"]=item["chapterUrl"]
@@ -58,8 +58,15 @@ class ImgPipeline(ImagesPipeline):
 
     #当下载请求完成后执行该方法
     def item_completed(self, results, item, info):
-        print("item flag is =======",item['flag'])
         if results:
             global image_path
             image_path = results[0][1]["path"]
+        return item
+
+class TestPipeline(object):
+
+    def __init__(self):
+        print('fdfd')
+    def process_item(self, item, spider):
+        print(item['chapterName'])
         return item

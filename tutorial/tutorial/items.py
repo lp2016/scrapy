@@ -25,6 +25,8 @@ class TutorialItem(scrapy.Item):
     coverUrl=scrapy.Field()
     #章节名称
     chapterName=scrapy.Field()
+    #章节ID
+    chapterID=scrapy.Field()
     #章节字数
     chapterWordCount=scrapy.Field()
     #内容
