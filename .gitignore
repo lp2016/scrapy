@@ -1,4 +1,4 @@
-/.idea/
+tutorial/.idea/
 tutorial/tutorial/__pycache__/
-/book/
+tutorial/tutorial/book/
 test.py
